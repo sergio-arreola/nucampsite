@@ -26,7 +26,7 @@ function RenderCard({item, isLoading, errMess}) {
                 </CardBody>
             </Card>
         </FadeTransform>
-    )
+    );
 }
 
 function Home(props) {
@@ -48,7 +48,11 @@ function Home(props) {
                     />
                 </div>
                 <div className="col-md m-1">
-                    <RenderCard item={props.partner} />
+                    <RenderCard 
+                        item={props.partner}
+                        isLoading={props.partnersLoading}
+                        errMess={props.partnersErrMess} 
+                    />
                 </div>
             </div>
         </div>
